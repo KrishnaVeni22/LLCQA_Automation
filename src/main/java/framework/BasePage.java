@@ -58,7 +58,7 @@ public class BasePage {
 	}
 
 	protected void clickUsingAccessibilityID(String contentdescript) {
-		logger.debug("Inside clickUsingIDContains function ");
+		logger.debug("Inside clickUsingAccessibilityID function ");
 		wait.
 		until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId((contentdescript))))
 		.click();				
@@ -69,7 +69,7 @@ public class BasePage {
 
 
 	protected List<AndroidElement> textMatchces(String regex) {
-		logger.debug("Inside clickUsingIDContains function ");
+		logger.debug("Inside textMatches function ");
 		
 		list  = driver.findElementsByAndroidUIAutomator("new UiSelector().textMatches(\"\\w+\\s{1}\\w+\")");
 
@@ -88,7 +88,7 @@ public class BasePage {
 
 
 	protected void enterText(String xpath, String txt) {
-		logger.debug("Inside clickUsingIDContains function ");
+		logger.debug("Inside enterText function ");
 
 		wait.
 		until(ExpectedConditions.visibilityOfElementLocated(MobileBy.xpath(xpath)))
@@ -122,7 +122,7 @@ public class BasePage {
 
 	protected void sendTextTo(String xpath, String searchItemName) {
 
-		logger.debug("Inside sendText function");
+		logger.debug("Inside sendTextTo function");
 	    driver.findElementByXPath(xpath).sendKeys(searchItemName);
 
 	}
@@ -133,7 +133,7 @@ public class BasePage {
 	}
 
 	public void hideKeyBoard() {
-		logger.debug("Inside pressKey function");
+		logger.debug("Inside hideKeyBoard function");
 		driver.hideKeyboard();
 
 	}
