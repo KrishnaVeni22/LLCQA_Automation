@@ -14,7 +14,7 @@ public class ExtentManager {
 
 			ExtentHtmlReporter html = new ExtentHtmlReporter("src\\main\\resources\\ExtentReports\\LLC_QA.html");
 			html.config().setDocumentTitle("Automation FrameWork");
-			html.config().setReportName(" SurfBoardCentral: ");
+			html.config().setReportName(" LCC QA report : ");
 			html.config().setTheme(Theme.STANDARD);
 			extentReport = new ExtentReports();
 			extentReport.attachReporter(html);
